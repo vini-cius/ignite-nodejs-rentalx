@@ -4,7 +4,7 @@ import { CreateUserUseCase } from "./CreateUserUseCase";
 
 class CreateUserController {
 	async handle(request: Request, response: Response): Promise<Response> {
-		const { name, driver_license, email, password, username } = request.body;
+		const { name, driver_license, email, password } = request.body;
 		const createUserUseCase = container.resolve(CreateUserUseCase);
 
 		await createUserUseCase.execute({
@@ -12,7 +12,6 @@ class CreateUserController {
 			driver_license,
 			email,
 			password,
-			username
 		})
 
 		return response.status(201).send();
