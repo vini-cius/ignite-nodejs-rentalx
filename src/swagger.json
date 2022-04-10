@@ -132,6 +132,15 @@
 					}
 				}
 			}
+		},
+		"/users": {
+			"post": {
+				"tags": [
+					"Users"
+				],
+				"summary": "Create a user",
+				"description": "Create a new user"
+			}
 		}
 	},
 	"definitions": {
